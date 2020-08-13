@@ -1,0 +1,28 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import com.paypal.bfs.test.employeeserv.EmployeeResourceImpl;
+import com.paypal.bfs.test.employeeserv.api.model.Address;
+import com.paypal.bfs.test.employeeserv.api.model.Employee;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+
+class EmployeeResourceImplTest {
+
+	@Test
+	void test() {
+		EmployeeResourceImpl employeeResource = new EmployeeResourceImpl();
+		ResponseEntity re = employeeResource.employeeGetById(13);
+	}
+
+}
